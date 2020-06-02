@@ -16,9 +16,10 @@ ActiveRecord::Schema.define(version: 2020_06_02_014714) do
   enable_extension "plpgsql"
 
   create_table "pokemons", force: :cascade do |t|
+    t.string "picture"
     t.string "name"
-    t.string "type"
-    t.string "abilities"
+    t.string "category"
+    t.string "ability"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

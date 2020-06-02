@@ -1,0 +1,23 @@
+.container
+  .section
+    .columns
+      .column.has-text-centered
+        %h1.title Pokedex
+    #app.row.columns.is-multiline
+      - @pokemons.each do |pokemon|
+        .column.is-4
+          .card.large
+            .card-image.is-16by9
+              %figure.image
+                %img{:alt => "Image", :src => "#{pokemon&.picture}"}
+            .card-content
+              .media
+                .media-left
+                  %figure.image.is-48x48
+                    %img{:alt => "Image", :src => "https://avatars3.githubusercontent.com/u/47339360?s=460&u=aa65450f48ae975d44b93c65518ba32c31ab7dcc&v=4"}
+                .media-content
+                  %p.title.is-4.no-padding= pokemon&.name
+                  %p
+                    %span.title.is-6
+                      %a{:href => "http://twitter.com/twitterid"}= pokemon&.category
+                  %p.subtitle.is-6= pokemon&.ability

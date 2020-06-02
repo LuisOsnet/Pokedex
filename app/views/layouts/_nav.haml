@@ -1,0 +1,20 @@
+%header
+  %nav.navbar.is-fixed-top.has-shadow
+    .container
+      .navbar-brand
+        %a.navbar-item{:href => "#"}
+          %img(src="https://luisosnet.com/wp-content/uploads/2020/05/osnet-1.png" alt="Luis Osnet")
+        %span.navbar-burger.burger{"data-target" => "navbarMenu"}
+          %span
+          %span
+          %span
+      #navbarMenu.navbar-menu
+        .navbar-end
+          %a.navbar-item.is-active(href="https://luisosnet.com/")
+            Home
+          %a.navbar-item(href="https://luisosnet.com/about-me/")
+            About me
+          %a.navbar-item(href="https://luisosnet.com/blog/")
+            Blog
+          %a.navbar-item(href="https://luisosnet.com/contact/")
+            Contact
